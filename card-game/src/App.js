@@ -49,6 +49,8 @@ class App extends React.Component {
               value={item}
               key={index}
               activationHandler={this.activationHandler}
+              attempt={this.state.attempt}
+              check={this.state.check}
             />
           ))
         }
