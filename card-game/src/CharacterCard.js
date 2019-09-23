@@ -3,14 +3,14 @@ import React from 'react';
 class CharacterCard extends React.Component {
  
     state = {
-        active: false
+        active: 0
     }
  
     activate = () => {
         this.setState({
-            active: !this.state.active
+            active: 1
         });
- 
+        if(this.state.active === 0)       
         this.props.activationHandler(this.props.value);
     }
  
