@@ -11,7 +11,7 @@ class CharacterCard extends React.Component {
             active: 1
         });
         if(this.state.active === 0)       
-        this.props.activationHandler(this.props.value);
+            this.props.activationHandler(this.props.value);
     }
     componentDidUpdate = (prevProps ) =>{
         console.log (this.props.attemp);
