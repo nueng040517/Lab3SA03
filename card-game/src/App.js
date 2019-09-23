@@ -13,14 +13,21 @@ const prepareStateFromWord = (given_word) => {
     chars,
     attempt: 1,
     guess: [],
-    completed: false
+    completed: false,
+    check: 0 
   }
 }
  
 class App extends React.Component {
  
   state = prepareStateFromWord(message);
- 
+  check = () => {
+    this.setState({
+      check: ++this.state.check,
+      completed: !this.state.completed,
+      attempt : this.state.attempt =+1
+    })
+  }
   activationHandler = (c) => {
     let guess = [...this.state.guess, c]
     this.setState({ guess })
